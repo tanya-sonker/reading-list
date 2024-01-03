@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="card-mt-3">
+        <div class="row mt-5">
+            <div class="col">
+                <h2 class="text-center">Details</h2>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <input class="form-control" [(ngModel)]="bookTitle" placeholder="title">
+            </div>
+            <div class="col-md-3">
+                <input class="form-control" [(ngModel)]="bookAuthor" placeholder="author">
+            </div>
+            <div class="col-md-3">
+                <input class="form-control" [(ngModel)]="bookStartDate" type="date" placeholder="book started date">
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary w-100" (click)="addBook()">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="text-center mt-5">Books</h2>
+    <ul class="list-group mt-3">
+        <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let book of books; index as i">
+            {{ book.title }} by {{ book.author }} started on {{ book.date | date:'dd/MM/yyyy'}}
+            <button class="btn btn-danger" (click)="deleteBook(i)">Delete</button>
+        </li>
+    </ul>
+</div>
+
+<!--
+<div>
+    <input [(ngModel)]="bookTitle" placeholder="title">
+    <input [(ngModel)]="bookAuthor" placeholder="author">
+    <input [(ngModel)]="bookStartDate" type="date" placeholder="book started">
+    <button (click)="addBook()">Add</button>
+</div>
+<ul>
+    <li *ngFor="let book of books; index as i">
+    {{ book.title }} by {{ book.author }} started on {{ book.date | date:'dd/MM/yyyy'}}
+    <button (click)="deleteBook(i)">Delete</button>
+    </li>
+</ul>
+-->
