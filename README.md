@@ -1,6 +1,11 @@
 # reading-list
 a simple, responsive angular application to manage my reading list by adding or deleting books 
 
+## demo
+test it out [here](https://tanyasonker.com/reading-list)
+
+<img width="1509" alt="reading-list" src="https://github.com/tanya-sonker/reading-list/assets/39142854/cc36084f-e98e-4539-89a2-b9fceef95a08">
+
 ## features
 - add books to a list and local storage
 - remove books from list and local storage
